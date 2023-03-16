@@ -20,20 +20,11 @@
         <div class="registration">
             <form class="" method="post" action="newproject.php">
                 <label for="project-name">New Project</label>
-                <input type="text" id="project_name" name="project-name">
+                <input type="text" id="project_name" name="project-name" required>
                 <input type="submit" name="Submit" id="Submit" value="Submit">
             </form>
         </div>
-        <div class="tracker">
-            <form action="">
-                <label for="project">Open Project</label>
-                <select id="project" name="project">
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-                <button><input type="submit" value="Open"></button>
-            </form>
-        </div>
+        <?php include 'project_manager.php';?>
     </div>
 </main>
 
