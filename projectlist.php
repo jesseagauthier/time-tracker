@@ -5,7 +5,7 @@
         $result = mysqli_query($conn, $sql);
 
 
-        echo "Project List". "<br>";
+        echo "<h2>Project List</h2>". "<br>";
 
 
         while ($row = mysqli_fetch_assoc($result)) {
