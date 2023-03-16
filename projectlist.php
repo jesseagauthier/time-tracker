@@ -8,7 +8,7 @@
 // Create connection
 $con = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
 // Check connection
-if ($conn->connect_error) {
+if ($con->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
@@ -18,7 +18,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "id: " . $row["projectname"];
+    echo "Project" . $row["projectname"];
   }
 } else {
   echo "0 results";
