@@ -8,10 +8,6 @@ $connect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 ?>
 
 
-
-
-
-
 <form action="" method="post">
     <?php
     $query = " select * from agedata";
