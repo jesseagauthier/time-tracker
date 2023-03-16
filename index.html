@@ -25,25 +25,10 @@
             </form>
         </div>
 
-        <?php
-        use PHPUnit\Framework\TestCase;
+    <?php
+    echo 'Current PHP version: ' . phpversion();
+    ?>
 
-        class OutputTest extends TestCase
-        {
-            public function testExpectFooActualFoo()
-            {
-                $this->expectOutputString('foo');
-                print 'foo';
-            }
-
-            public function testExpectBarActualBaz()
-            {
-                $this->expectOutputString('bar');
-                print 'baz';
-            }
-        }
-
-        ?>
     </div>
 </main>
 
