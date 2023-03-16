@@ -2,10 +2,10 @@
 // database connection code
 // $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
 
-$con = mysqli_connect('localhost', 'project_manager', 'Bailey1967!!','project_tracker');
+$con = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!','project_tracker');
 
 // get the post records
-$projectname = $_POST['project_name'];
+$projectname = $_POST['project-name'];
 
 
 // database insert SQL code
@@ -16,7 +16,7 @@ $rs = mysqli_query($con, $sql);
 
 if($rs)
 {
-	echo "Contact Records Inserted";
+	echo "Project Added";
 }
 
 ?>
