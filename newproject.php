@@ -18,5 +18,3 @@ if($rs)
 {
 	echo "Project Added";
 }
-
-?>
