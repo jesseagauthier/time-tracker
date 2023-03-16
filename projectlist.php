@@ -1,42 +1,27 @@
 <?php
 
-define('DB_SERVER', 'localhost:3306');
-define('DB_USERNAME', 'project_manager');
-define('DB_PASSWORD', 'Bailey1967!!');
-define('DB_NAME', 'project_tracker');
+$servername = "localhost:3306";
+$username = "project_manager";
+$password = "Bailey1967!!";
+$dbname = "project_tracker";
 
-
-$link = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_NAME);
-
-if($link === false) {
-    die("No Connection Found") . mysqli_connect_error();
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
 
+$sql = "SELECT projectname FROM project_manager";
+$result = $conn->query($sql);
 
-$sql = "SELECT * FROM projectname";
-if($result = mysqli_query($link, $sql)) {
-    if(mysqli_num_rows($result) > 0) {
-        while($row = mysqli_fetch_array($result)){
-        }
-    }
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["projectname"];
+  }
+} else {
+  echo "0 results";
 }
-
-
-
-
-
-
-
-
-// $con = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!','project_tracker');
-
-
-
-
-
-
-
-
-
 $conn->close();
 ?>
