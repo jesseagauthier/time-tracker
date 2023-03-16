@@ -15,27 +15,29 @@
     <title>Time Tracker</title>
 </head>
 <main>
-    <div>
-        <h2>Project Time Tracker - Latest Version .023</h2>
-        <div class="registration">
-            <form class="" method="post" action="newproject.php">
-                <label for="project-name">New Project</label>
-                <input type="text" id="project_name" name="project-name" required>
-                <input type="submit" name="Submit" id="Submit" value="Submit">
-            </form>
+    <div class="container-fluid d-flex flex-wrap">
+        <h2 class="col-12 text-center">Project Time Tracker</h2>
+        <div class="row d-flex flex-nowrap">
+            <div class="registration col-12 text-center bg-primary p-3 m-3">
+                <h3 class="text-white my-3">Add A Project</h3>
+                <a class="text-white bg-black my-4 p-2" href="projectlist.php">Active Projects</a>
+                <form class="my-4" method="post" action="newproject.php">
+                    <input type="text" id="project_name" name="project-name" required>
+                    <input type="submit" name="Submit" id="Submit" value="Submit">
+                </form>
+            </div>
+            <div class="project-selection col-10">
+                <form class="" method="post" action="">
+                    <label for="project-name">Project</label>
+                    <select name="project" id="project" form="carform">
+                        <option>Volvo</option>
+                    </select>
+                </form>
+            </div>
         </div>
-        <div class="project-selection">
-            <form class="" method="post" action="">
-                <label for="project-name">Project</label>
-                <select name="project" id="project" form="carform">
-                    <option>Volvo</option>
-                </select>
-            </form>
-        </div>
-
     </div>
 </main>
-
+<!-- <footer><p>Version .02</p></footer> -->
 <body>
 </body>
 
