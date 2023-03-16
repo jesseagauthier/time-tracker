@@ -4,9 +4,12 @@
         $sql = "SELECT * FROM project_manager;";
         $result = mysqli_query($conn, $sql);
 
+
+        echo "Project List";
+
+
         while ($row = mysqli_fetch_assoc($result)) {
-          echo "Project List";
-          echo $row['projectname']. "<br>";
+          echo $row['projectname'] . "<br>";
         }
 
 
