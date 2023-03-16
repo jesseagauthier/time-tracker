@@ -4,7 +4,7 @@ define('DB_USERNAME', 'project_manager');
 define('DB_PASSWORD', 'Bailey1967!!');
 define('DB_NAME', 'project_tracker');
 
-$connect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+// $connect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 ?>
 
 
