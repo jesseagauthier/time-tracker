@@ -6,8 +6,7 @@ header("Content-type: text/css");
 
 ?>
 
-<!-- .list  {
-    display: flex;
-    gap: 5em;
-    justify-content: center;
-} -->
+
+.dog {
+    background-color: black;
+}
