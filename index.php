@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <h2 class="col-12 text-center">Project Time Tracker</h2>
         <div class="row">
-            <div class="col-6 text-center bg-primary p-2 m-3">
+            <div class="col-6 text-center bg-primary p-2 m-3 align-center">
                 <h3 class="text-white my-3">Add A Project</h3>
                 <form class="my-4" method="post" action="newproject.php">
                     <input type="text" id="project_name" name="project-name" required>
