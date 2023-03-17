@@ -45,7 +45,7 @@
                 ?>
             </div>
         </div>
-        <table>
+        <table class="text-black">
             <thead>Active Project</thead>
             <tbody>
                 <tr>
