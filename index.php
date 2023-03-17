@@ -36,7 +36,7 @@
             </div>
             <div class="col-11 offset-1 text-white bg-primary m-1">
                 <?php
-                echo "<h2 class='text-center'> Project List </h2>" . "<br>";
+                echo "<h2 class=' h1 text-white text-center> Project List </h2>" . "<br>";
                 while ($row = mysqli_fetch_assoc($result)) {
                     $project_name = $row['projectname'];
                     echo "<ul>" . "<li>" . $project_name . "</li>" . "</ul>" . "<br>";
@@ -46,6 +46,16 @@
                 ?>
             </div>
         </div>
+        <table>
+            <thead>Active Project</thead>
+            <tbody>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+            </tbody>
+        </table>
 </main>
 <footer class="container text-center">
     <p>Version Happy Taco</p>
