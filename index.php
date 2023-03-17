@@ -41,7 +41,6 @@
                     $project_name = $row['projectname'];
                     echo "<ul>" . "<li>" . $project_name . "</li>" . "</ul>" . "<br>";
                 }
-
                 $conn->close();
                 ?>
             </div>
