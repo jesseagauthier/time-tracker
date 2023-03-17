@@ -14,7 +14,7 @@
     <title>Time Tracker</title>
 </head>
 <main>
-    <div class="container">
+    <div class="container text-center">
         <h2 class="col-12">Project Time Tracker</h2>
         <div class="row">
             <div class="col-11 offset-1 text-center bg-primary m-1">
