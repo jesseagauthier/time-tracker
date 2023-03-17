@@ -18,5 +18,5 @@ $rs = mysqli_query($con, $sql);
 
 if($rs)
 {
-	// echo "Project Added";
+	echo "Project Added";
 }
