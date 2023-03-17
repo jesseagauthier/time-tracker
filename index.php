@@ -14,7 +14,7 @@
     <title>Time Tracker</title>
 </head>
 <main>
-    <div class="container-fluid">
+    <div class="container">
         <h2 class="col-12 text-center">Project Time Tracker</h2>
         <div class="row">
             <div class="col-12 text-center bg-primary p-2 m-3">
@@ -24,7 +24,7 @@
                     <input type="submit" name="Submit" id="Submit" value="Submit">
                 </form>
             </div>
-            <div class="list col-12 bg-primary p-2 m-3">
+            <div class="ol-12 list text-center bg-primary p-2 m-3">
                 <?php
 
                 $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
@@ -50,7 +50,7 @@
             </div>
         </div>
 </main>
-<footer>
+<footer class="container">
     <p>Version .4</p>
 </footer>
 
