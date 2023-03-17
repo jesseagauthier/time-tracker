@@ -16,7 +16,6 @@
 <main>
     <div class="container text-center">
         <h2 class="col-12">Project Time Tracker</h2>
-        echo "<div class='d-flex gx-5 active-projects-title'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>";
         <div class="row">
             <div class="col-11 offset-1 text-center bg-primary m-1">
                 <h3 class="text-white my-3 align-self-center">Add A Project</h3>
