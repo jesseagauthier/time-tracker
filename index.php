@@ -37,7 +37,6 @@
 
                 while ($row = mysqli_fetch_assoc($result)) {
                     $project_name = $row['projectname'];
-                    echo $row['projectname'] . "<br>";
                     echo "<h2>" .  $project_name . "</h2>" . "<br>";
                 }
 
