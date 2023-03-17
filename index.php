@@ -14,6 +14,13 @@
     <title>Time Tracker</title>
 </head>
 <main>
+<?php
+    $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+    $sql = "SELECT * FROM project_manager;";
+    $result = mysqli_query($conn, $sql);
+    $numberofrows = mysqli_num_rows($result);
+    ?>
+
     <div class="container text-center">
         <h2 class="col-12">Project Time Tracker</h2>
         echo "<div class='d-flex gx-5 active-projects-title'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>";
@@ -28,10 +35,6 @@
             <div class="col-11 offset-1 list text-center bg-primary m-1">
                 <?php
 
-                $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
-                $sql = "SELECT * FROM project_manager;";
-                $result = mysqli_query($conn, $sql);
-                $numberofrows = mysqli_num_rows($result);
 
 
                 echo "<div class='d-flex gx-5 active-projects-title'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>";
