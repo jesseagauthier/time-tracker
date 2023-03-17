@@ -17,14 +17,14 @@
     <div class="container-fluid">
         <h2 class="col-12 text-center">Project Time Tracker</h2>
         <div class="row">
-            <div class="col-6 text-center bg-primary p-2 m-3">
+            <div class="col-12 text-center bg-primary p-2 m-3">
                 <h3 class="text-white my-3 align-self-center">Add A Project</h3>
                 <form class="my-4 align-self-center" method="post" action="newproject.php">
                     <input type="text" id="project_name" name="project-name" required>
                     <input type="submit" name="Submit" id="Submit" value="Submit">
                 </form>
             </div>
-            <div class="list col-4 bg-primary p-2 m-3">
+            <div class="list col-12 bg-primary p-2 m-3">
                 <?php
 
                 $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
