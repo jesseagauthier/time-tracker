@@ -5,8 +5,3 @@
 header("Content-type: text/css");
 
 ?>
-
-
-.dog {
-    background-color: black;
-}

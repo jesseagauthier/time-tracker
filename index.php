@@ -32,7 +32,7 @@
                 $numberofrows = mysqli_num_rows($result);
 
 
-                echo "<div class='dog'>" . "<p> Active Projects: <p>" . "<p>" . $numberofrows . "</p>" . "<div>";
+                echo "<div class='active-projects-title'>" . "<p> Active Projects: <p>" . "<p>" . $numberofrows . "</p>" . "<div>";
                 echo "<h2> Project List </h2>" . "<br>";
 
 
