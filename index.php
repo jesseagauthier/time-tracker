@@ -22,6 +22,16 @@
                     <input type="text" id="project_name" name="project-name" required>
                     <input type="submit" name="Submit" id="Submit" value="Submit">
                 </form>
+                <div class="project-selection col-10">
+                    <form class="" method="post" action="">
+                        <label for="project-name">Project</label>
+                        <select name="project" id="project" form="carform">
+                            <option>Volvo</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12">
                 <div class="col-12 text-center bg-primary p-3 m-3">
                     <?php
                     $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
@@ -39,14 +49,6 @@
 
                     $conn->close();
                     ?>
-                </div>
-                <div class="project-selection col-10">
-                    <form class="" method="post" action="">
-                        <label for="project-name">Project</label>
-                        <select name="project" id="project" form="carform">
-                            <option>Volvo</option>
-                        </select>
-                    </form>
                 </div>
             </div>
         </div>
