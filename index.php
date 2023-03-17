@@ -34,7 +34,7 @@
                 <?php echo "<div class='d-flex gx-5 active-projects-title text-centers'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>"; ?>
 
             </div>
-            <div class="col-11 offset-1 list text-center bg-primary m-1">
+            <div class="col-11 offset-1 list text-white bg-primary m-1">
                 <?php
                 echo "<h2> Project List </h2>" . "<br>";
                 while ($row = mysqli_fetch_assoc($result)) {
