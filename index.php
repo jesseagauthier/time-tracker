@@ -32,7 +32,7 @@
                 $numberofrows = mysqli_num_rows($result);
 
 
-                echo "<div class='d-flex gx-5'>" . "<h4> Active Projects: </h4>" . "<h5>" . $numberofrows . "</h5>" . "</div>";
+                echo "<div class='d-flex gx-5'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>";
                 echo "<h2> Project List </h2>" . "<br>";
 
 
@@ -49,7 +49,7 @@
             </div>
         </div>
 </main>
-<footer><p>Version .4dd8888</p></footer>
+<footer><p>Version .4</p></footer>
 
 <body>
 </body>
