@@ -29,18 +29,21 @@
                 $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
                 $sql = "SELECT * FROM project_manager;";
                 $result = mysqli_query($conn, $sql);
+                $project_name = $row['projectname'];
 
 
                 echo "<h2> Project List </h2>" . "<br>";
 
 
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo  $row['projectname'] . "<br>";
+                    echo $row['projectname'] . "<br>";
+                    echo "<h2>" .  $project_name . "</h2>" . "<br>";
                 }
 
 
                 $conn->close();
-                ?></div>
+                ?>
+                </div>
         </div>
 </main>
 <!-- <footer><p>Version .02</p></footer> -->
