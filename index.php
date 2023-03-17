@@ -14,6 +14,7 @@
     <title>Time Tracker</title>
 </head>
 <main>
+
     <?php
     $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
     $sql = "SELECT * FROM project_manager;";
@@ -23,7 +24,9 @@
 
     <div class="container text-center">
         <h2 class="col-12">Project Time Tracker</h2>
-        <?php echo "<div class='d-flex gx-5 active-projects-title'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>"; ?>
+        <?php
+        echo "<div class='d-flex gx-5 active-projects-title'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>";
+        ?>
         <div class="row">
             <div class="col-11 offset-1 text-center bg-primary m-1">
                 <h3 class="text-white my-3 align-self-center">Add A Project</h3>
@@ -34,21 +37,13 @@
             </div>
             <div class="col-11 offset-1 list text-center bg-primary m-1">
                 <?php
-
-
-
                 echo "<div class='d-flex gx-5 active-projects-title'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>";
                 echo "<h2> Project List </h2>" . "<br>";
-
-
-
                 while ($row = mysqli_fetch_assoc($result)) {
                     $project_name = $row['projectname'];
 
                     echo "<ul>" . "<li>" . $project_name . "</li>" . "</ul>" . "<br>";
                 }
-
-
                 $conn->close();
                 ?>
             </div>
