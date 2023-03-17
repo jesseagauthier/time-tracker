@@ -50,7 +50,7 @@
         </div>
 </main>
 <footer class="container">
-    <p>Version .41234</p>
+    <p>Version .1</p>
 </footer>
 
 <body>
