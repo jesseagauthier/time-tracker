@@ -32,9 +32,9 @@
                 $numberofrows = mysqli_num_rows($result);
 
 
-
+                echo "<p> Active Projects: <p>" . "<p>". $numberofrows . "</p>";
                 echo "<h2> Project List </h2>" . "<br>";
-                echo "<h3> Number of Active Projects <h3>" . $numberofrows ;
+
 
 
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -46,7 +46,7 @@
 
                 $conn->close();
                 ?>
-                </div>
+            </div>
         </div>
 </main>
 <!-- <footer><p>Version .02</p></footer> -->
