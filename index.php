@@ -23,7 +23,7 @@
                     <input type="submit" name="Submit" id="Submit" value="Submit">
                 </form>
             </div>
-            <div class="list col-5 offset-1 text-center bg-primary p-2 m-3">
+            <div class="list col-4 bg-primary p-2 m-3">
                 <?php
 
                 $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
