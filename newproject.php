@@ -18,5 +18,5 @@ $rs = mysqli_query($con, $sql);
 if($rs)
 {
 	// echo "Project Added";
-	header("Refresh:0; url=page2.php");
+	header("Refresh:0; url=indexphp");
 }
