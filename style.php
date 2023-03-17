@@ -6,8 +6,8 @@ header("Content-type: text/css");
 
 ?>
 
-.list  {
+<!-- .list  {
     display: flex;
     gap: 5em;
-
-}
+    justify-content: center;
+} -->
