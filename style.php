@@ -5,3 +5,9 @@
 header("Content-type: text/css");
 
 ?>
+
+
+.active-projects-title {
+display: flex;
+gap: 1em;
+}
