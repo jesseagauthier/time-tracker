@@ -15,7 +15,7 @@
 </head>
 <main>
     <div class="container">
-        <h2 class="col-12 text-center">Project Time Tracker</h2>
+        <h2 class="col-12">Project Time Tracker</h2>
         <div class="row">
             <div class="col-11 offset-1 text-center bg-primary m-1">
                 <h3 class="text-white my-3 align-self-center">Add A Project</h3>
