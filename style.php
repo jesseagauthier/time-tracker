@@ -8,6 +8,7 @@ header("Content-type: text/css");
 
 
 .active-projects-title {
-display: flex;
-gap: 1em;
+    display: flex;
+    gap: 1em;
+    color: white;
 }
