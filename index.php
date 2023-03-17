@@ -17,7 +17,7 @@
         <div class="row d-flex flex-nowrap">
             <div class="registration col-12 text-center bg-primary p-3 m-3">
                 <h3 class="text-white my-3">Add A Project</h3>
-                <a class="text-white bg-black my-4 p-2" href="projectlist.php">Active Projects</a>
+                <!-- <a class="text-white bg-black my-4 p-2" href="projectlist.php">Active Projects</a> -->
                 <form class="my-4" method="post" action="newproject.php">
                     <input type="text" id="project_name" name="project-name" required>
                     <input type="submit" name="Submit" id="Submit" value="Submit">
