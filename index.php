@@ -15,7 +15,7 @@
     <div class="container-fluid d-flex flex-wrap">
         <h2 class="col-12 text-center">Project Time Tracker</h2>
         <div class="row d-flex flex-nowrap">
-            <div class="registration col-12 text-center bg-primary p-3 m-3">
+            <div class="registration col-10 offset-2 text-center bg-primary p-3 m-3">
                 <h3 class="text-white my-3">Add A Project</h3>
                 <!-- <a class="text-white bg-black my-4 p-2" href="projectlist.php">Active Projects</a> -->
                 <form class="my-4" method="post" action="newproject.php">
