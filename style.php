@@ -5,7 +5,6 @@
 header("Content-type: text/css");
 
 ?>
-
-h2 {
+.list h2 {
     background-color: black;
 }

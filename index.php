@@ -23,23 +23,24 @@
                     <input type="submit" name="Submit" id="Submit" value="Submit">
                 </form>
             </div>
-            <div class="col-5 offset-1 text-center bg-primary p-2 m-3"> <?php
+            <div class=" list col-5 offset-1 text-center bg-primary p-2 m-3">
+                <?php
 
-                                                                        $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
-                                                                        $sql = "SELECT * FROM project_manager;";
-                                                                        $result = mysqli_query($conn, $sql);
-
-
-                                                                        echo "<h2>Project List</h2>" . "<br>";
+                $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+                $sql = "SELECT * FROM project_manager;";
+                $result = mysqli_query($conn, $sql);
 
 
-                                                                        while ($row = mysqli_fetch_assoc($result)) {
-                                                                            echo  $row['projectname'] . "<br>";
-                                                                        }
+                echo "<h2> Project List </h2>" . "<br>";
 
 
-                                                                        $conn->close();
-                                                                        ?></div>
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo  $row['projectname'] . "<br>";
+                }
+
+
+                $conn->close();
+                ?></div>
         </div>
 </main>
 <!-- <footer><p>Version .02</p></footer> -->
