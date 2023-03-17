@@ -57,7 +57,7 @@
         </table>
 </main>
 <footer class="container text-center">
-    <p>Version Happy Taco</p>
+    <p>Version Happy fTaco</p>
 </footer>
 
 <body>
