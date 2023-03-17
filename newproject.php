@@ -1,5 +1,4 @@
 <?php
-header("Refresh:0; url=indexphp");
 // database connection code
 
 // $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
@@ -18,5 +17,6 @@ $rs = mysqli_query($con, $sql);
 
 if($rs)
 {
-	echo "Project Added";
+	header("Refresh:0; url=index.php");
+	// echo "Project Added";
 }
