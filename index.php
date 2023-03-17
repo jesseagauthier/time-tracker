@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <script src="main.js" defer></script>
     <title>Time Tracker</title>
@@ -25,35 +22,36 @@
                     <input type="text" id="project_name" name="project-name" required>
                     <input type="submit" name="Submit" id="Submit" value="Submit">
                 </form>
-            </div>
-            <div class="project-selection col-10">
-                <form class="" method="post" action="">
-                    <label for="project-name">Project</label>
-                    <select name="project" id="project" form="carform">
-                        <option>Volvo</option>
-                    </select>
-                </form>
+                <div class="col-12 text-center bg-primary p-3 m-3">
+                    <?php
+                    $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+                    $sql = "SELECT * FROM project_manager;";
+                    $result = mysqli_query($conn, $sql);
+
+
+                    echo "<h2>Project List</h2>" . "<br>";
+
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo $row['projectname'] . "<br>";
+                    }
+
+
+                    $conn->close();
+                    ?>
+                </div>
+                <div class="project-selection col-10">
+                    <form class="" method="post" action="">
+                        <label for="project-name">Project</label>
+                        <select name="project" id="project" form="carform">
+                            <option>Volvo</option>
+                        </select>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 </main>
-        <?php
 
-                $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
-                $sql = "SELECT * FROM project_manager;";
-                $result = mysqli_query($conn, $sql);
-
-
-                echo "<h2>Project List</h2>". "<br>";
-
-
-                while ($row = mysqli_fetch_assoc($result)) {
-                  echo $row['projectname'] . "<br>";
-                }
-
-
-                $conn->close();
-                ?>
 <!-- <footer><p>Version .02</p></footer> -->
 
 <body>
