@@ -19,7 +19,6 @@
     $sql = "SELECT * FROM project_manager;";
     $result = mysqli_query($conn, $sql);
     $numberofrows = mysqli_num_rows($result);
-
     ?>
 
 
@@ -28,6 +27,7 @@
         <div class="row">
             <div class="col-11 offset-1 text-center bg-primary m-1">
                 <h3 class="text-white my-3 align-self-center">Add A Project</h3>
+                <?php echo "<div class='d-flex gx-5 active-projects-title'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>"; ?>
                 <form class="my-4 align-self-center" method="post" action="newproject.php">
                     <input type="text" id="project_name" name="project-name" required>
                     <input type="submit" name="Submit" id="Submit" value="Submit">
@@ -35,12 +35,9 @@
             </div>
             <div class="col-11 offset-1 list text-center bg-primary m-1">
                 <?php
-                echo "<div class='d-flex gx-5 active-projects-title'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>";
                 echo "<h2> Project List </h2>" . "<br>";
-
                 while ($row = mysqli_fetch_assoc($result)) {
                     $project_name = $row['projectname'];
-
                     echo "<ul>" . "<li>" . $project_name . "</li>" . "</ul>" . "<br>";
                 }
 
@@ -49,7 +46,7 @@
             </div>
         </div>
 </main>
-<footer class="container">
+<footer class="container text-center">
     <p>Version .1</p>
 </footer>
 
