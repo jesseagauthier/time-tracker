@@ -29,14 +29,17 @@
                 $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
                 $sql = "SELECT * FROM project_manager;";
                 $result = mysqli_query($conn, $sql);
+                $numberofrows = mysqli_num_rows($result);
 
 
 
                 echo "<h2> Project List </h2>" . "<br>";
+                echo "<h3> Number of Active Projects <h3>" . $numberofrows ;
 
 
                 while ($row = mysqli_fetch_assoc($result)) {
                     $project_name = $row['projectname'];
+
                     echo "<p>" .  $project_name . "</p>" . "<br>";
                 }
 
