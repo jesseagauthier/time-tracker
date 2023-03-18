@@ -61,10 +61,7 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Project ID</th>
                                 <th>Project Name</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -72,8 +69,6 @@
                                 <tr>
                                     <td><?php echo $row['project_id']; ?></td>
                                     <td><?php echo $row['project_name']; ?></td>
-                                    <td><?php echo $row['start_date']; ?></td>
-                                    <td><?php echo $row['end_date']; ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
