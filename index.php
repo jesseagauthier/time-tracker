@@ -39,7 +39,7 @@
                 <div class="col-12 offset-1 text-white bg-primary m-1">
                     <?php
 
-                    echo "<h2 class='h1 text-center '> Project List </h2>" . "<br>";
+                    echo ;
                     while ($rows = mysqli_fetch_assoc($result)) {
                         $project_name = $rows['projectname'];
                         echo "<ul>" . "<li>" . $project_name . "</li>" . "</ul>" . "<br>";
@@ -59,6 +59,7 @@
 
                     <!-- Generate HTML table -->
                     <table>
+                        <h2 class='h1 text-center'>Project List</h2>
                         <thead>
                             <tr>
                                 <th class="my-1">Project Name</th>
