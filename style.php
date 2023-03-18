@@ -41,3 +41,8 @@ margin: 0 4em;
 .project-summary th,tr {
 border: 3px solid black;
 }
+
+
+form label {
+    width 100%;
+}
