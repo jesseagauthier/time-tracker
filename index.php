@@ -56,11 +56,11 @@
                         <tbody>
                             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                                 <tr>
-                                    <td class="m-1"><?php echo $row['projectname']; ?></td>
-                                    <td class="m-1"><?php echo $row['contact_name']; ?></td>
-                                    <td class="m-1"><?php echo $row['contact_email']; ?></td>
-                                    <td class="m-1"><?php echo $row['contact_phone']; ?></td>
-                                    <td class="m-1"><?php echo $row['project_type']; ?></td>
+                                    <td class=""><?php echo $row['projectname']; ?></td>
+                                    <td class=""><?php echo $row['contact_name']; ?></td>
+                                    <td class=""><?php echo $row['contact_email']; ?></td>
+                                    <td class=""><?php echo $row['contact_phone']; ?></td>
+                                    <td class=""><?php echo $row['project_type']; ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
