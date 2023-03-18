@@ -42,7 +42,7 @@
                     ?>
 
                     <!-- Generate HTML table -->
-                    <table class="project-summary bg-black text-white">
+                    <table class="project-summary">
                         <h2 class='h1 text-center'>Project List</h2>
                         <thead>
                             <tr>
