@@ -29,11 +29,11 @@ if (isset($_POST['Submit'])) {
 	$result = mysqli_query($con, $query);
 	$project_exists = mysqli_num_rows($result) > 0;
 
-	if (mysqli_errno($con) == 1062) {
+	if ($project_exists) {
 		header("Location: index.php?error=duplicate");
 		exit();
 	}
-	} else {
+} else {
 		// database insert SQL code
 		$sql = "INSERT INTO `project_manager` (`projectname`, `contact_name`, `contact_email`, `contact_phone`, `project_type`)
                 VALUES ('$projectname', '$contact_name', '$contact_email', '$contact_phone', '$project_type')";
@@ -48,4 +48,5 @@ if (isset($_POST['Submit'])) {
 			echo "Error: " . $sql . "<br>" . mysqli_error($con);
 		}
 	}
+
 mysqli_close($con);
