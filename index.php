@@ -55,10 +55,11 @@
                         <!-- PHP CODE TO FETCH DATA FROM ROWS -->
                         <?php
                         // LOOP TILL END OF DATA
-                        while ($rows = $result->fetch_assoc()) {
+                        while ($rows = $result->fetch_assoc())
+                        $project_name = $row['projectname'];{
                         ?>
                             <tr>
-                                <td><?php echo $rows['projectname']; ?></td>
+                                <td><?php echo $project_name; ?></td>
                             </tr>
                         <?php
                         }
