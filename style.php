@@ -42,6 +42,11 @@ margin: 0 4em;
 border: 3px solid black;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 
 form label,input {
     width 100%;
