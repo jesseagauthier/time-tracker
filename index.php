@@ -51,6 +51,7 @@
                         <h2 class='h1 text-center'>Project List</h2>
                         <thead>
                             <tr>
+                               <th><?php echo $row['projectname']; ?></th>
                                 <th class="my-1">Project Name</th>
                             </tr>
                         </thead>
