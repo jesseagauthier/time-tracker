@@ -96,7 +96,7 @@
             </div>
     </main>
     <footer class="container text-center">
-        <p>Version Happy Taco 3.0</p>
+        <p>Version Happy Taco 6.0</p>
     </footer>
 
     <body>
