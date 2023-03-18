@@ -1,6 +1,7 @@
-.active-projects-title {
-    color: white;
+body {
+    background-color: black;
 }
+
 
 #submit {
     all: unset;
