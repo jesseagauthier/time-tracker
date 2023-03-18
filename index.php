@@ -68,11 +68,6 @@
     <footer class="container text-center">
         <p>Version Happy Taco111</p>
     </footer>
-    <?php
-    // Close database connection
-    mysqli_close($conn);
-    ?>
-
     <body>
     </body>
 
