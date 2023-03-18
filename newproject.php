@@ -42,13 +42,10 @@ if (isset($_POST['Submit'])) {
 		$rs = mysqli_query($con, $sql);
 
 		if ($rs) {
-			// Redirect back to the form page with a success message
-			header("Location: form.php?success=project_added");
+			header("Location: index.php");
 			exit();
 		} else {
-			// Redirect back to the form page with an error message
-			header("Location: form.php?error=database_error");
-			exit();
+			echo "Error: " . $sql . "<br>" . mysqli_error($con);
 		}
 	}
 }
