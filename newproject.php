@@ -42,7 +42,7 @@ if (isset($_POST['Submit'])) {
 		$rs = mysqli_query($con, $sql);
 
 		if ($rs) {
-			header("Location: index.php");
+			header("Location: url(index.php)");
 			exit();
 		} else {
 			echo "Error: " . $sql . "<br>" . mysqli_error($con);
