@@ -80,34 +80,36 @@ if (isset($_POST['password'])) {
 
                         // Generate HTML table
                         echo '
-                <table class="project-summary">
-                    <h2 class="h1 text-center">Project List</h2>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Contact</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Project Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            ';
+            <table class="project-summary">
+                <h2 class="h1 text-center">Project List</h2>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Project Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+        ';
                         while ($row = mysqli_fetch_assoc($result)) {
                             echo '
-                        <tr>
-                            <td class="">' . $row['projectname'] . '</td>
-                            <td class="">' . $row['contact_name'] . '</td>
-                            <td class="">' . $row['contact_email'] . '</td>
-                            <td class="">' . $row['contact_phone'] . '</td>
-                            <td class="">' . $row['project_type'] . '</td>
-                        </tr>
-                ';
+                    <tr>
+                        <td class="">' . $row['projectname'] . '</td>
+                        <td class="">' . $row['contact_name'] . '</td>
+                        <td class="">' . $row['contact_email'] . '</td>
+                        <td class="">' . $row['contact_phone'] . '</td>
+                        <td class="">' . $row['project_type'] . '</td>
+                    </tr>
+            ';
                         }
                         echo '
-                    </tbody>
-                </table>
-            ';
+                </tbody>
+            </table>
+        ';
+                        // Hide the password form
+                        echo '<style>form { display: none; }</style>';
                     } else {
                         echo '<p>Incorrect password. Please try again.</p>';
                     }
