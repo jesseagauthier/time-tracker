@@ -43,6 +43,6 @@ border: 3px solid black;
 }
 
 
-form label {
+form label,input {
     width 100%;
 }
