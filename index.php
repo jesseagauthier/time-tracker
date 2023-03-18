@@ -37,7 +37,7 @@
             <div class="col-12 offset-1 text-white bg-primary m-1">
                 <?php
                 // sql to create table
-                $sql = "CREATE TABLE projectNames (
+                $sql = "CREATE TABLE project_manager (
                 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 projectname VARCHAR(30) NOT NULL,";
 
