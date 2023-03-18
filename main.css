@@ -3,7 +3,8 @@
     all: unset;
     background-color: black;
     color: white;
-    padding: 1em;
+    padding: .50em;
+    cursor: pointer;
 }
 
 
