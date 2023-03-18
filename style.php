@@ -5,8 +5,3 @@
 header("Content-type: text/css");
 
 ?>
-
-
-.active-projects-title {
-    color: white;
-}
