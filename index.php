@@ -7,6 +7,7 @@
 
     <!DOCTYPE html>
     <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,13 +48,17 @@
                         <thead>
                             <tr>
                                 <th class="my-1">Project Name</th>
-                                <th></th>
+                                <th>Contact</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Project Type </th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                                 <tr>
                                     <td><?php echo $row['projectname']; ?></td>
+                                    <td><?php echo $row['contact_name']; ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
