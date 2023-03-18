@@ -71,23 +71,21 @@ if (isset($_POST['login'])) {
             </div>
 
             <!-- OutPut -->
-            <div class="">
-                <?php
-                // Check if password has been submitted
-                if (isset($_POST['password'])) {
-                    $password = $_POST['password'];
+            <div class=""><?php
+                            // Check if password is submitted
+                            if (isset($_POST['password'])) {
+                                // Check if password is correct
+                                $password = $_POST['password'];
+                                if ($password === 'your_password_here') { // Replace 'your_password_here' with your actual password
+                                    // Connect to database
+                                    $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
 
-                    // Check if password is correct
-                    if ($password == "your_password_here") {
-                        // Connect to database
-                        $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+                                    // Retrieve data from database
+                                    $sql = "SELECT * FROM project_manager;";
+                                    $result = mysqli_query($conn, $sql);
 
-                        // Retrieve data from database
-                        $sql = "SELECT * FROM project_manager;";
-                        $result = mysqli_query($conn, $sql);
-                ?>
-
-                        <!-- Generate HTML table -->
+                                    // Generate HTML table
+                            ?>
                         <table class="project-summary">
                             <h2 class='h1 text-center'>Project List</h2>
                             <thead>
@@ -111,14 +109,12 @@ if (isset($_POST['login'])) {
                                 <?php } ?>
                             </tbody>
                         </table>
-
-                <?php } else {
-                        // Incorrect password
-                        echo "";
-                    }
-                }
+                <?php
+                                } else {
+                                    echo 'Incorrect password';
+                                }
+                            }
                 ?>
-
             </div>
         </div>
 </main>
