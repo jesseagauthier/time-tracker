@@ -48,6 +48,4 @@ if (isset($_POST['Submit'])) {
 			echo "Error: " . $sql . "<br>" . mysqli_error($con);
 		}
 	}
-}
-
 mysqli_close($con);
