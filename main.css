@@ -1,3 +1,15 @@
 .active-projects-title {
     color: white;
 }
+
+#Submit {
+    all: unset;
+    background-color: black;
+    color: white;
+}
+
+
+#Submit:hover {
+    background-color: white;
+    color: black;
+}
