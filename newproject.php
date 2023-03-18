@@ -31,6 +31,7 @@ if (isset($_POST['Submit'])) {
 
 	if ($project_exists) {
 		// Redirect back to the form page with an error message
+		header("Location: index.php");
 		echo "form.php?error=project_exists";
 		exit();
 	} else {
