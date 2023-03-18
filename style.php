@@ -54,5 +54,9 @@ align-content: center;
 
 
 form label,input {
-    width: 50%;
+width: 50%;
+}
+
+#submit {
+    margin: 1em 0;
 }
