@@ -54,5 +54,5 @@ align-content: center;
 
 
 form label,input:not(:last-child) {
-    width 50%;
+    width: 50%;
 }
