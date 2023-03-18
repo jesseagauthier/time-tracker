@@ -73,37 +73,47 @@ if (isset($_POST['login'])) {
             <!-- OutPut -->
             <div class="">
                 <?php
-                // Retrieve data from database
-                $sql = "SELECT * FROM project_manager;";
-                $result = mysqli_query($conn, $sql);
+                // Check if password has been entered
+                if (isset($_POST['password'])) {
+                    $password = $_POST['password'];
+                    if ($password == 'your_password') {
+                        // Password is correct, connect to database and retrieve data
+                        $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+                        $sql = "SELECT * FROM project_manager;";
+                        $result = mysqli_query($conn, $sql);
+                ?>
+                        <!-- Generate HTML table -->
+                        <table class="project-summary">
+                            <h2 class='h1 text-center'>Project List</h2>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Contact</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Project Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                                    <tr>
+                                        <td class=""><?php echo $row['projectname']; ?></td>
+                                        <td class=""><?php echo $row['contact_name']; ?></td>
+                                        <td class=""><?php echo $row['contact_email']; ?></td>
+                                        <td class=""><?php echo $row['contact_phone']; ?></td>
+                                        <td class=""><?php echo $row['project_type']; ?></td>
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                <?php
+                    } else {
+                        // Password is incorrect, display error message
+                        echo "Incorrect password.";
+                    }
+                }
                 ?>
 
-                <!-- Generate HTML table -->
-                <table class="project-summary">
-                    <h2 class='h1 text-center'>Project List</h2>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Contact</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Project Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                            <tr>
-                                <td class=""><?php echo $row['projectname']; ?></td>
-                                <td class=""><?php echo $row['contact_name']; ?></td>
-                                <td class=""><?php echo $row['contact_email']; ?></td>
-                                <td class=""><?php echo $row['contact_phone']; ?></td>
-                                <td class=""><?php echo $row['project_type']; ?></td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
-
-                <?php
                 // Close database connection
                 mysqli_close($conn);
                 ?>
