@@ -6,6 +6,9 @@ header("Content-type: text/css");
 
 ?>
 
+body {
+    background-color: grey;
+}
 
 #submit {
 all: unset;
