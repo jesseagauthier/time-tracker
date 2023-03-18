@@ -25,7 +25,7 @@
     </head>
     <main>
         <div class="container">
-            <h2 class="display-1 col-12 text-center"> Gauthier Studios - Project Tracker</h2>
+            <h2 class="display-3 col-12 text-center"> Gauthier Studios - Project Tracker</h2>
             <div class="row">
                 <!-- Input -->
                 <div class="col-11 offset-1 text-center bg-primary m-1">
