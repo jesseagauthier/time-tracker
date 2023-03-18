@@ -79,3 +79,8 @@ form label,input,select {
 width: 100%;
 }
 }
+
+.error-message {
+    width: 100%;
+    background-color: black;
+}
