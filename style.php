@@ -23,6 +23,7 @@ cursor: pointer;
 #submit:hover {
 background-color: white;
 color: black;
+border: 2px solid black;
 }
 
 .project-summary {
@@ -66,7 +67,7 @@ margin: 1em 0;
 }
 
 @media screen and (min-width: 766px) {
-    .form {
+    form {
     width: 50%;
     margin: 0 auto;
     border-spacing: 30px;
