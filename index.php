@@ -130,6 +130,7 @@ if (isset($_POST['password'])) {
     <?php
     // Replace 'your_username' and 'your_repo_name' with your actual GitHub username and repository name
     $url = "https://api.github.com/repos/jgautheir/time-tracker/commits?per_page=1";
+    var_dump($data);
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
