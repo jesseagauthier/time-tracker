@@ -40,7 +40,17 @@
                         <input type="tel" id="phone" name="phone" required>
                         <!-- Project Type -->
                         <label for="type">Project Type</label>
-                        <input type="text" id="type" name="type" required>
+                        <select name="type" id="type" form="typeform" required>
+                            <option value="web">Web Development</option>
+                            <option value="design">Web Design</option>
+                            <option value="WordPress">WordPress</option>
+                            <option value="UI">UI</option>
+                        </select>
+
+
+
+
+
                         <input type="submit" name="Submit" id="submit" value="Add New Project">
                     </form>
                 </div>
