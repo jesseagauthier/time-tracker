@@ -32,7 +32,7 @@ if(isset($_POST['Submit'])) {
     $rs = mysqli_query($con, $sql);
 
     if($rs) {
-        header("Refresh:0; url=index.php");
+        // header("Refresh:0; url=index.php");
         // echo "Project Added";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($con);
