@@ -43,7 +43,7 @@ margin: 0 4em;
 }
 
 .project-summary th,tr,td {
-    padding: 0em 1em;
+    padding: 0em .40em;
 border: 3px solid black;
 }
 
