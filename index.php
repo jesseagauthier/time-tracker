@@ -71,22 +71,22 @@ if (isset($_POST['password'])) {
                 </form>
             </div>
 
-            <!-- OutPut -->
-            <div class=""><?php
-                            // Check if password is submitted
-                            if (isset($_POST['password'])) {
-                                // Check if password is correct
-                                $password = $_POST['password'];
-                                if ($password === 'your_password_here') { // Replace 'your_password_here' with your actual password
-                                    // Connect to database
-                                    $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+            <div>
+                <?php
+                // Check if password is submitted
+                if (isset($_POST['password'])) {
+                    // Check if password is correct
+                    $password = $_POST['password'];
+                    if ($password === 'Bailey1967!!') { // Replace 'your_password_here' with your actual password
+                        // Connect to database
+                        $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
 
-                                    // Retrieve data from database
-                                    $sql = "SELECT * FROM project_manager;";
-                                    $result = mysqli_query($conn, $sql);
+                        // Retrieve data from database
+                        $sql = "SELECT * FROM project_manager;";
+                        $result = mysqli_query($conn, $sql);
 
-                                    // Generate HTML table
-                            ?>
+                        // Generate HTML table
+                ?>
                         <table class="project-summary">
                             <h2 class='h1 text-center'>Project List</h2>
                             <thead>
@@ -111,12 +111,12 @@ if (isset($_POST['password'])) {
                             </tbody>
                         </table>
                 <?php
-                                } else {
-                                    echo 'Incorrect password';
-                                }
-                            }
+                    }
+                }
                 ?>
+
             </div>
+
         </div>
 </main>
 <footer class="container text-center mt-5">
