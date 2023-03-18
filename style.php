@@ -66,7 +66,7 @@ margin: 1em 0;
 }
 
 @media screen and (min-width: 766px) {
-    .project-summary {
+    .form {
     width: 50%;
     margin: 0 auto;
     border-spacing: 30px;
