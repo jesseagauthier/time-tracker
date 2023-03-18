@@ -47,7 +47,7 @@ border: 3px solid black;
 
 form {
 display: flex;
-flex-direction: column;
+flex-wrap: wrap;
 justify-content: center;
 align-content: center;
 }
