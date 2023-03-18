@@ -75,7 +75,7 @@ border-spacing: 30px;
 
 
 
-form label,input {
+form label,input,select {
 width: 100%;
 }
 }
