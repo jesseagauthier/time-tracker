@@ -67,7 +67,7 @@
                         <tbody>
                             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                                 <tr>
-                                    <td><?php echo $row['project_name']; ?></td>
+                                    <td><?php echo $row['projectname']; ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
