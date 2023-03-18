@@ -19,8 +19,9 @@
 }
 
 
-.project-summary tr {
+.project-summary thead tr {
     display: flex;
+    width: 100%;
     justify-content: space-between;
 }
 
