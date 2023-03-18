@@ -22,6 +22,20 @@
     <main>
         <div class="container">
             <h2 class="display-4 col-12 text-center">Project Tracker</h2>
+            <div class="login">
+                <form>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <input type="submit" name="login" id="login" value="Add New Project">
+                </form>
+
+
+            </div>
+
+
+
+
+
             <div class="row">
                 <!-- Input -->
                 <div class="">
