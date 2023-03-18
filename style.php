@@ -10,7 +10,7 @@ body {
 background-color: rgb(237, 233, 233);
 }
 
-#submit {
+#submit, #login {
 all: unset;
 background-color: black;
 color: white;
@@ -63,7 +63,7 @@ input {
 margin: .50em 0;
 }
 
-#submit {
+#submit, #login {
 margin: 1em 0;
 }
 

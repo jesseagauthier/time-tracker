@@ -26,7 +26,7 @@
                 <form>
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
-                    <input type="submit" name="login" id="login" value="Add New Project">
+                    <input type="submit" name="login" id="login" value="Login">
                 </form>
 
 
