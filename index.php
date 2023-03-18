@@ -86,34 +86,45 @@ if (isset($_POST['password'])) {
                         $result = mysqli_query($conn, $sql);
 
                         // Generate HTML table
-                ?>
-                        <table class="project-summary">
-                            <h2 class='h1 text-center'>Project List</h2>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Contact</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Project Type</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
-                                    <tr>
-                                        <td class=""><?php echo $row['projectname']; ?></td>
-                                        <td class=""><?php echo $row['contact_name']; ?></td>
-                                        <td class=""><?php echo $row['contact_email']; ?></td>
-                                        <td class=""><?php echo $row['contact_phone']; ?></td>
-                                        <td class=""><?php echo $row['project_type']; ?></td>
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
-                <?php
+                        echo '
+                <table class="project-summary">
+                    <h2 class="h1 text-center">Project List</h2>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Project Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            ';
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo '
+                        <tr>
+                            <td class="">' . $row['projectname'] . '</td>
+                            <td class="">' . $row['contact_name'] . '</td>
+                            <td class="">' . $row['contact_email'] . '</td>
+                            <td class="">' . $row['contact_phone'] . '</td>
+                            <td class="">' . $row['project_type'] . '</td>
+                        </tr>
+                ';
+                        }
+                        echo '
+                    </tbody>
+                </table>
+            ';
+                    } else {
+                        echo '<p>Incorrect password. Please try again.</p>';
                     }
                 }
                 ?>
+                <form method="post" action="">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <input type="submit" name="login" id="login" value="Login">
+                </form>
 
             </div>
 
