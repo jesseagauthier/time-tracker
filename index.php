@@ -41,10 +41,10 @@
                         <!-- Project Type -->
                         <label for="type">Project Type</label>
                         <select name="type" id="type" form="typeform" required>
-                            <option value="web">Web Development</option>
-                            <option value="design">Web Design</option>
-                            <option value="WordPress">WordPress</option>
-                            <option value="UI">UI</option>
+                            <option name="type" value="web">Web Development</option>
+                            <option name="type" value="design">Web Design</option>
+                            <option name="type" value="WordPress">WordPress</option>
+                            <option name="type" value="UI">UI</option>
                         </select>
 
 
