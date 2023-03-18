@@ -39,7 +39,7 @@
                 // sql to create table
                 $sql = "CREATE TABLE project_manager (
                 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                projectname VARCHAR(30) NOT NULL,";
+                project_manager VARCHAR(30) NOT NULL,";
 
                 $conn->$sql();
                 echo "Table MyGuests created successfully";
