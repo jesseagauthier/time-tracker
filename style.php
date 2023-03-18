@@ -24,12 +24,11 @@ color: black;
 
 .project-summary {
 width: 100%;
+border-spacing: 30px;
 }
 
 
 .project-summary thead tr {
-    display:flex;
-    justify-content: space-evenly;
 width: fit-content;
 }
 

@@ -1,4 +1,3 @@
-
 #submit {
     all: unset;
     background-color: black;
@@ -16,6 +15,7 @@
 
 .project-summary {
     width: 100%;
+    border-spacing: 30px;
 }
 
 
