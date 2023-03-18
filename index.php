@@ -21,12 +21,26 @@
     </head>
     <main>
         <div class="container">
-            <h2 class="display-4 col-12 text-center"> Gauthier Studios - Project Tracker</h2>
+            <h2 class="display-4 col-12 text-center">Project Tracker</h2>
             <div class="row">
                 <!-- Input -->
                 <div class="col-11 offset-1 text-center bg-primary m-1">
                     <form class="my-4 align-self-center" method="post" action="newproject.php">
+                        <!--Name  -->
+                        <label for="project-name">Name</label>
                         <input type="text" id="project_name" name="project-name" required>
+                        <!-- Contact -->
+                        <label for="contact">Contact</label>
+                        <input type="text" id="contact" name="contact" required>
+                        <!-- Email -->
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <!-- Phone -->
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <!-- Project Type -->
+                        <label for="type">Project Type</label>
+                        <input type="text" id="type" name="type" required>
                         <input type="submit" name="Submit" id="submit" value="New Project">
                     </form>
                 </div>
