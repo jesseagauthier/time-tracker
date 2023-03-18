@@ -126,7 +126,7 @@ if (isset($_POST['password'])) {
         </div>
 </main>
 <footer class="container text-center mt-5">
-    <p>Version Happy Taco 6.0</p>
+    <p>Versiofn Happy Taco 6.0</p>
     <?php
     // Replace 'your_username' and 'your_repo_name' with your actual GitHub username and repository name
     $url = "https://api.github.com/repos/jgautheir/time-tracker/commits?per_page=1";
