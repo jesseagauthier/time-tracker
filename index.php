@@ -73,9 +73,6 @@ if (isset($_POST['login'])) {
             <!-- OutPut -->
             <div class="">
                 <?php
-                // Connect to database
-                $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
-
                 // Retrieve data from database
                 $sql = "SELECT * FROM project_manager;";
                 $result = mysqli_query($conn, $sql);
