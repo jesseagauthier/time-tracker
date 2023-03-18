@@ -36,7 +36,7 @@
                     <?php echo "<div class='d-flex gx-5 active-projects-title text-centers'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>"; ?>
 
                 </div>
-                <div class="bg-primary text-white">
+                <div class="">
                     <?php
                     // Connect to database
                     $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
