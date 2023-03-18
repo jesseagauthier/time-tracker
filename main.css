@@ -13,3 +13,9 @@
     background-color: white;
     color: black;
 }
+
+.project-summary th {
+    font-weight: bold;
+    font-size: 1rem;
+
+}

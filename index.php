@@ -43,15 +43,15 @@
                     ?>
 
                     <!-- Generate HTML table -->
-                    <table>
+                    <table class="project-summary">
                         <h2 class='h1 text-center'>Project List</h2>
                         <thead>
                             <tr>
-                                <th class="m-1">Project Name</th>
-                                <th class="m-1">Contact</th>
-                                <th class="m-1">Email</th>
-                                <th class="m-1">Phone</th>
-                                <th class="m-1">Project Type</th>
+                                <th>Name</th>
+                                <th>Contact</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Project Type</th>
                             </tr>
                         </thead>
                         <tbody>
