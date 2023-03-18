@@ -29,11 +29,10 @@ if (isset($_POST['Submit'])) {
 	$result = mysqli_query($con, $query);
 	$project_exists = mysqli_num_rows($result) > 0;
 
-	if ($project_exists) {
-		// Redirect back to the form page with an error message
-		header("Location: index.php");
-		echo "form.php?error=project_exists";
+	if (mysqli_errno($con) == 1062) {
+		header("Location: index.php?error=duplicate");
 		exit();
+	}
 	} else {
 		// database insert SQL code
 		$sql = "INSERT INTO `project_manager` (`projectname`, `contact_name`, `contact_email`, `contact_phone`, `project_type`)

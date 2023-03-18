@@ -46,6 +46,11 @@
                             <option value="WordPress">WordPress</option>
                             <option value="UI">UI</option>
                         </select>
+                        <?php
+                        if (isset($_GET['error']) && $_GET['error'] == 'duplicate') {
+                            echo "<p class='error-message'>Error: This project already exists.</p>";
+                        }
+                        ?>
 
                         <input type="submit" name="Submit" id="submit" value="Add New Project">
                     </form>
