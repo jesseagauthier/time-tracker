@@ -48,26 +48,49 @@
                     ?>
                 </div>
                 <div class="bg-primary text-white">
+                    <?php
+                    // Connect to database
+                    $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+
+                    // Retrieve data from database
+                    $sql = "SELECT * FROM project_manager;";
+                    $result = mysqli_query($conn, $sql);
+                    ?>
+
+                    <!-- Generate HTML table -->
                     <table>
                         <thead>
                             <tr>
+                                <th>Project ID</th>
                                 <th>Project Name</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                                 <tr>
+                                    <td><?php echo $row['project_id']; ?></td>
                                     <td><?php echo $row['project_name']; ?></td>
+                                    <td><?php echo $row['start_date']; ?></td>
+                                    <td><?php echo $row['end_date']; ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
                     </table>
+
+                    <?php
+                    // Close database connection
+                    mysqli_close($conn);
+                    ?>
+
                 </div>
             </div>
     </main>
     <footer class="container text-center">
         <p>Version Happy Taco111</p>
     </footer>
+
     <body>
     </body>
 
