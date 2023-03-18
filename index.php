@@ -47,18 +47,21 @@
                         <h2 class='h1 text-center'>Project List</h2>
                         <thead>
                             <tr>
-                                <th class="my-1">Project Name</th>
-                                <th>Contact</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Project Type </th>
+                                <th class="m-1">Project Name</th>
+                                <th class="m-1">Contact</th>
+                                <th class="m-1">Email</th>
+                                <th class="m-1">Phone</th>
+                                <th class="m-1">Project Type</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                                 <tr>
-                                    <td><?php echo $row['projectname']; ?></td>
-                                    <td><?php echo $row['contact_name']; ?></td>
+                                    <td class="m-1"><?php echo $row['projectname']; ?></td>
+                                    <td class="m-1"><?php echo $row['contact_name']; ?></td>
+                                    <td class="m-1"><?php echo $row['contact_email']; ?></td>
+                                    <td class="m-1"><?php echo $row['contact_phone']; ?></td>
+                                    <td class="m-1"><?php echo $row['project_type']; ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>
