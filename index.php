@@ -27,6 +27,7 @@
         <div class="container">
             <h2 class="col-12 text-center">Project Time Tracker</h2>
             <div class="row">
+                <!-- Input -->
                 <div class="col-11 offset-1 text-center bg-primary m-1">
                     <h3 class="text-white my-3 align-self-center">Add A Project</h3>
                     <form class="my-4 align-self-center" method="post" action="newproject.php">
@@ -36,6 +37,7 @@
                     <?php echo "<div class='d-flex gx-5 active-projects-title text-centers'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>"; ?>
 
                 </div>
+                <!-- OutPut -->
                 <div class="">
                     <?php
                     // Connect to database
@@ -52,6 +54,7 @@
                         <thead>
                             <tr>
                                 <th class="my-1">Project Name</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -70,6 +73,24 @@
 
                 </div>
             </div>
+            <?php
+            // Connect to database
+            $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+
+            // Define the SQL statement to add new columns to the project_manager table
+            $sql = "ALTER TABLE project_manager ADD contact_name varchar(255), ADD contact_email varchar(255), ADD contact_phone varchar(255), ADD project_type varchar(255);";
+
+            // Execute the SQL statement
+            if (mysqli_query($conn, $sql)) {
+                echo "New columns added successfully.";
+            } else {
+                echo "Error: " . mysqli_error($conn);
+            }
+
+            // Close database connection
+            mysqli_close($conn);
+            ?>
+
     </main>
     <footer class="container text-center">
         <p>Version Happy Taco111</p>
