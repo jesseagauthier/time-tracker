@@ -49,34 +49,29 @@
                 </div>
                 <div class="bg-primary text-white">
                     <table>
-                        <tr>
-                            <th>Project Name</th>
-                        </tr>
-                        <!-- PHP CODE TO FETCH DATA FROM ROWS -->
-                        <?php
-                        // LOOP TILL END OF DATA
-                        while ($rows = $result->fetch_assoc())
-                        $project_name .= $rows['projectname'];{
-                        ?>
+                        <thead>
                             <tr>
-                                <td><?php echo $project_name; ?></td>
+                                <th>Project Name</th>
                             </tr>
-                        <?php
-                        }
-                        ?>
+                        </thead>
+                        <tbody>
+                            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                                <tr>
+                                    <td><?php echo $row['project_name']; ?></td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
                     </table>
                 </div>
-
-
-
-
-
-
             </div>
     </main>
     <footer class="container text-center">
-        <p>Version Happy Tac1o</p>
+        <p>Version Happy Taco111</p>
     </footer>
+    <?php
+    // Close database connection
+    mysqli_close($conn);
+    ?>
 
     <body>
     </body>
