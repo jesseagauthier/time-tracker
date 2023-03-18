@@ -61,7 +61,7 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Project Name</th>
+                                <th class="my-1">Project Name</th>
                             </tr>
                         </thead>
                         <tbody>
