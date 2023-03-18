@@ -55,11 +55,11 @@
                         <!-- PHP CODE TO FETCH DATA FROM ROWS -->
                         <?php
                         // LOOP TILL END OF DATA
-                        while ($rows = $result->fetch_assoc())
-                        $project_name = $rows['projectname'];{
+                            while ($rows = $result->fetch_assoc())
+                            {
                         ?>
                             <tr>
-                                <td><?php echo $project_name; ?></td>
+                                <td><?php echo $rows['projectname']; ?></td>
                             </tr>
                         <?php
                         }
@@ -75,7 +75,7 @@
             </div>
     </main>
     <footer class="container text-center">
-        <p>Version Happy Taco</p>
+        <p>Version Happy Tac1o</p>
     </footer>
 
     <body>
