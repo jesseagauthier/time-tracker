@@ -36,6 +36,12 @@
             </div>
             <div class="col-3 offset-1 text-white bg-primary m-1">
                 <?php
+                // sql to create table
+                $sql = "CREATE TABLE projectNames (
+                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                projectname VARCHAR(30) NOT NULL,";
+
+
                 echo "<h2 class='h1 text-center '> Project List </h2>" . "<br>";
                 while ($row = mysqli_fetch_assoc($result)) {
                     $project_name = $row['projectname'];
