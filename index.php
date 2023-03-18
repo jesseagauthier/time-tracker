@@ -76,7 +76,7 @@
             </div>
     </main>
     <footer class="container text-center">
-        <p>Version Happy Taco24t</p>
+        <p>Version Happy Tacot</p>
     </footer>
 
     <body>
