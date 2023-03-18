@@ -47,7 +47,7 @@
                     $conn->close();
                     ?>
                 </div>
-                <div>
+                <div class="bg-primary">
                     <table>
                         <tr>
                             <th>Project Name</th>
