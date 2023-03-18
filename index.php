@@ -20,7 +20,7 @@
         <title>Time Tracker</title>
     </head>
     <main>
-        <div class="container">
+        <div class="container text-white">
             <h2 class="display-4 col-12 text-center">Project Tracker</h2>
             <div class="row">
                 <!-- Input -->
