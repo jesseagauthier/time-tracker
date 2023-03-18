@@ -45,9 +45,11 @@ border: 3px solid black;
 form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 
 form label,input {
-    width 100%;
+    width 50%;
 }
