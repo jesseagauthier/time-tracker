@@ -109,13 +109,13 @@ if (isset($_POST['password'])) {
             </table>
         ';
                         // Hide the password form
-                        echo '<style>form { display: none; }</style>';
+                        echo '<style>.password_form { display: none; }</style>';
                     } else {
                         echo '<p>Incorrect password. Please try again.</p>';
                     }
                 }
                 ?>
-                <form method="post" action="">
+                <form class="password_form" method="post" action="">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
                     <input type="submit" name="login" id="login" value="Login">
