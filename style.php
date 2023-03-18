@@ -82,5 +82,6 @@ width: 100%;
 
 .error-message {
     width: 100%;
-    background-color: black;
+    text-align: center;
+    <!-- background-color: black; -->
 }
