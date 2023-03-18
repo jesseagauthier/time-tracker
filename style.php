@@ -67,15 +67,15 @@ margin: 1em 0;
 }
 
 @media screen and (min-width: 766px) {
-    form {
-    width: 50%;
-    margin: 0 auto;
-    border-spacing: 30px;
-    }
+form, .project-summary {
+width: 50%;
+margin: 0 auto;
+border-spacing: 30px;
+}
 
 
 
-    form label,input {
-    width: 100%;
-    }
+form label,input {
+width: 100%;
+}
 }
