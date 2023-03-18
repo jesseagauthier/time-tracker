@@ -127,22 +127,6 @@ if (isset($_POST['password'])) {
 </main>
 <footer class="container text-center mt-5">
     <p>Versiofn Happy Taco 6.0</p>
-    <?php
-    // Replace 'your_username' and 'your_repo_name' with your actual GitHub username and repository name
-    $url = "https://api.github.com/repos/jgautheir/time-tracker/commits?per_page=1";
-    var_dump($data);
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0");
-    $result = curl_exec($ch);
-    curl_close($ch);
-    $decoded = json_decode($result, true);
-    $commit_count = $decoded['total_count'];
-    ?>
-
-    <p>Number of commits: <?php echo $commit_count; ?></p>
-
 </footer>
 
 <body>
