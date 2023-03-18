@@ -41,7 +41,7 @@
                 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 projectname VARCHAR(30) NOT NULL,";
 
-                $conn->exec($sql);
+                $conn->$sql();
                 echo "Table MyGuests created successfully";
 
 
