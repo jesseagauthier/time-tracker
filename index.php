@@ -56,7 +56,7 @@
                         <?php
                         // LOOP TILL END OF DATA
                         while ($rows = $result->fetch_assoc())
-                        $project_name = $row['projectname'];{
+                        $project_name = $rows['projectname'];{
                         ?>
                             <tr>
                                 <td><?php echo $project_name; ?></td>
