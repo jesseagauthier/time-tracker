@@ -42,7 +42,7 @@ font-size: 1rem;
 margin: 0 4em;
 }
 
-.project-summary th,tr {
+.project-summary th,tr,td {
 border: 3px solid black;
 }
 
