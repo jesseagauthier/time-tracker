@@ -1,16 +1,17 @@
 <?php
-if (isset($_POST['login'])) {
+// Check if password is submitted
+if (isset($_POST['password'])) {
+    // Check if password is correct
     $password = $_POST['password'];
-    if ($password === 'Bailey1967!!') { // Replace 'mypassword' with the actual database password
+    if ($password === 'Bailey1967!!') { // Replace 'your_password_here' with your actual password
+        // Connect to database
         $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+
+        // Retrieve data from database
         $sql = "SELECT * FROM project_manager;";
         $result = mysqli_query($conn, $sql);
-        $numberofrows = mysqli_num_rows($result);
-    } else {
-        echo "<p class='error-message'>Invalid password</p>";
     }
-}
-?>
+} ?>
 
 <!DOCTYPE html>
 <html lang="en">
