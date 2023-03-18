@@ -24,7 +24,7 @@
             <h2 class="display-4 col-12 text-center">Project Tracker</h2>
             <div class="row">
                 <!-- Input -->
-                <div class="col-12 text-white my-1">
+                <div class="col-12 mb-1">
                     <form class="my-4 align-self-center" method="post" action="newproject.php">
                         <!--Name  -->
                         <label for="project-name">Name</label>
