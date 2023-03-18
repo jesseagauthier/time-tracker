@@ -58,9 +58,15 @@ width: 50%;
 }
 
 input {
-    margin: .50em 0;
+margin: .50em 0;
 }
 
 #submit {
-    margin: 1em 0;
+margin: 1em 0;
+}
+
+@media screen and (min-width: 766px) {
+    form label,input {
+    width: 100%;
+}
 }
