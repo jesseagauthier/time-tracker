@@ -40,11 +40,11 @@
                         <input type="tel" id="phone" name="phone" required>
                         <!-- Project Type -->
                         <label for="type">Project Type</label>
-                        <select name="type" id="type" form="typeform" required>
-                            <option name="type" value="web">Web Development</option>
-                            <option name="type" value="design">Web Design</option>
-                            <option name="type" value="WordPress">WordPress</option>
-                            <option name="type" value="UI">UI</option>
+                        <select name="project_type" id="type" required>
+                            <option name="project_type" value="web">Web Development</option>
+                            <option name="project_type" value="design">Web Design</option>
+                            <option name="project_type" value="WordPress">WordPress</option>
+                            <option name="project_type" value="UI">UI</option>
                         </select>
 
                         <input type="submit" name="Submit" id="submit" value="Add New Project">
