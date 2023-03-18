@@ -41,7 +41,7 @@
                         <!-- Project Type -->
                         <label for="type">Project Type</label>
                         <input type="text" id="type" name="type" required>
-                        <input type="submit" name="Submit" id="submit" value="New Project">
+                        <input type="submit" name="Submit" id="submit" value="Add New Project">
                     </form>
                 </div>
                 <!-- OutPut -->
