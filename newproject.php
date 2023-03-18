@@ -1,34 +1,56 @@
-// Get the form data
-$projectname = $_POST['project-name'];
-$contact_name = $_POST['contact'];
-$contact_email = $_POST['email'];
-$contact_phone = $_POST['phone'];
-$project_type = $_POST['project_type'];
+<?php
+// database connection code
+$con = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
 
-// Escape special characters to prevent SQL injection
-$projectname = mysqli_real_escape_string($con, $projectname);
-$contact_name = mysqli_real_escape_string($con, $contact_name);
-$contact_email = mysqli_real_escape_string($con, $contact_email);
-$contact_phone = mysqli_real_escape_string($con, $contact_phone);
-$project_type = mysqli_real_escape_string($con, $project_type);
-
-// Check if the project already exists in the database
-$sql = "SELECT * FROM `project_manager` WHERE `projectname` = '$projectname' AND `contact_email` = '$contact_email'";
-$result = mysqli_query($con, $sql);
-
-if(mysqli_num_rows($result) > 0) {
-// If the project already exists, prevent the submission
-echo "This project already exists in the database.";
-} else {
-// If the project doesn't exist, insert it into the database
-$insert_sql = "INSERT INTO `project_manager` (`projectname`, `contact_name`, `contact_email`, `contact_phone`, `project_type`)
-VALUES ('$projectname', '$contact_name', '$contact_email', '$contact_phone', '$project_type')";
-
-$insert_result = mysqli_query($con, $insert_sql);
-
-if($insert_result) {
-echo "Project added successfully.";
-} else {
-echo "Error adding project: " . mysqli_error($con);
+// Check connection
+if (mysqli_connect_errno()) {
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	exit();
 }
+
+// Check if the form is submitted
+if (isset($_POST['Submit'])) {
+	// Get the form data
+	$projectname = $_POST['project-name'];
+	$contact_name = $_POST['contact'];
+	$contact_email = $_POST['email'];
+	$contact_phone = $_POST['phone'];
+	$project_type = $_POST['project_type'];
+
+	// Escape special characters to prevent SQL injection
+	$projectname = mysqli_real_escape_string($con, $projectname);
+	$contact_name = mysqli_real_escape_string($con, $contact_name);
+	$contact_email = mysqli_real_escape_string($con, $contact_email);
+	$contact_phone = mysqli_real_escape_string($con, $contact_phone);
+	$project_type = mysqli_real_escape_string($con, $project_type);
+
+	// Check if the project already exists in the database
+	$query = "SELECT projectname FROM project_manager WHERE projectname = '$projectname' LIMIT 1";
+	$result = mysqli_query($con, $query);
+	$project_exists = mysqli_num_rows($result) > 0;
+
+	if ($project_exists) {
+		// Redirect back to the form page with an error message
+		header("Location: form.php?error=project_exists");
+		exit();
+	} else {
+		// database insert SQL code
+		$sql = "INSERT INTO `project_manager` (`projectname`, `contact_name`, `contact_email`, `contact_phone`, `project_type`)
+                VALUES ('$projectname', '$contact_name', '$contact_email', '$contact_phone', '$project_type')";
+
+		// insert in database
+		$rs = mysqli_query($con, $sql);
+
+		if ($rs) {
+			// Redirect back to the form page with a success message
+			header("Location: form.php?success=project_added");
+			exit();
+		} else {
+			// Redirect back to the form page with an error message
+			header("Location: form.php?error=database_error");
+			exit();
+		}
+	}
 }
+
+mysqli_close($con);
