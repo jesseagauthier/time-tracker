@@ -7,7 +7,7 @@ header("Content-type: text/css");
 ?>
 
 body {
-    background-color: grey;
+background-color: rgb(237, 233, 233);
 }
 
 #submit {
@@ -46,13 +46,13 @@ border: 3px solid black;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
 }
 
 
 form label,input {
-    width 50%;
+width 50%;
 }
