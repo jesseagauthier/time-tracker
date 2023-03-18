@@ -53,6 +53,6 @@ align-content: center;
 }
 
 
-form label,input {
-width 50%;
+form label,input:not(:last-child) {
+    width 50%;
 }
