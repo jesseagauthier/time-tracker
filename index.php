@@ -47,10 +47,6 @@
                             <option name="type" value="UI">UI</option>
                         </select>
 
-
-
-
-
                         <input type="submit" name="Submit" id="submit" value="Add New Project">
                     </form>
                 </div>
