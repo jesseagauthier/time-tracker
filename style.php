@@ -36,5 +36,7 @@ width: fit-content;
 font-weight: bold;
 font-size: 1rem;
 margin: 0 4em;
-
+}
+tr:nth-child(even) {
+background-color: #D6EEEE;
 }
