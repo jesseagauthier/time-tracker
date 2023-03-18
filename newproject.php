@@ -45,7 +45,8 @@ if (isset($_POST['Submit'])) {
 		header("Location: url(index.php)");
 		exit();
 	} else {
-		echo "Error: " . $sql . "<br>" . mysqli_error($con);
+		header("Location: index.php?error=database");
+		exit();
 	}
 }
 
