@@ -57,6 +57,10 @@ form label,input {
 width: 50%;
 }
 
+input {
+    margin: .50em 0;
+}
+
 #submit {
     margin: 1em 0;
 }
