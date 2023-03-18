@@ -34,7 +34,7 @@
                 <?php echo "<div class='d-flex gx-5 active-projects-title text-centers'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>"; ?>
 
             </div>
-            <div class="col-3 offset-1 text-white bg-primary m-1">
+            <div class="col-12 offset-1 text-white bg-primary m-1">
                 <?php
                 // sql to create table
                 $sql = "CREATE TABLE projectNames (
