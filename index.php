@@ -32,10 +32,8 @@
                     <h3 class="text-white my-3 align-self-center">Add A Project</h3>
                     <form class="my-4 align-self-center" method="post" action="newproject.php">
                         <input type="text" id="project_name" name="project-name" required>
-                        <input type="submit" name="Submit" id="Submit" value="Submit">
+                        <input type="submit" name="Submit" id="Submit" value="Add Project">
                     </form>
-                    <?php echo "<div class='d-flex gx-5 active-projects-title text-centers'>" . "<h4> Active Projects: </h4>" . "<h5 class='mx-2'>" . $numberofrows . "</h5>" . "</div>"; ?>
-
                 </div>
                 <!-- OutPut -->
                 <div class="">
