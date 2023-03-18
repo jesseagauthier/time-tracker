@@ -34,19 +34,19 @@ if (isset($_POST['Submit'])) {
 		exit();
 	}
 } else {
-		// database insert SQL code
-		$sql = "INSERT INTO `project_manager` (`projectname`, `contact_name`, `contact_email`, `contact_phone`, `project_type`)
+	// database insert SQL code
+	$sql = "INSERT INTO `project_manager` (`projectname`, `contact_name`, `contact_email`, `contact_phone`, `project_type`)
                 VALUES ('$projectname', '$contact_name', '$contact_email', '$contact_phone', '$project_type')";
 
-		// insert in database
-		$rs = mysqli_query($con, $sql);
+	// insert in database
+	$rs = mysqli_query($con, $sql);
 
-		if ($rs) {
-			header("Location: url(index.php)");
-			exit();
-		} else {
-			echo "Error: " . $sql . "<br>" . mysqli_error($con);
-		}
+	if ($rs) {
+		header("Location: url(index.php)");
+		exit();
+	} else {
+		echo "Error: " . $sql . "<br>" . mysqli_error($con);
 	}
+}
 
 mysqli_close($con);
