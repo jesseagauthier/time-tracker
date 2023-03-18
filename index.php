@@ -37,12 +37,19 @@
             <div class="col-12 offset-1 text-white bg-primary m-1">
                 <?php
                 // sql to create table
-                $sql = "CREATE TABLE project_manager (
-                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                project_manager VARCHAR(30) NOT NULL,";
+                $sql = "CREATE TABLE MyGuests (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR(30) NOT NULL,
+lastname VARCHAR(30) NOT NULL,
+email VARCHAR(50),
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
 
-                $conn->$sql();
-                echo "Table MyGuests created successfully";
+                if ($conn->query($sql) === TRUE) {
+                    echo "Table MyGuests created successfully";
+                } else {
+                    echo "Error creating table: " . $conn->error;
+                }
 
 
                 echo "<h2 class='h1 text-center '> Project List </h2>" . "<br>";
