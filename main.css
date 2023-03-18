@@ -14,6 +14,12 @@
     color: black;
 }
 
+
+.project-summary tr {
+    display: flex;
+    justify-content: space-between;
+}
+
 .project-summary th {
     font-weight: bold;
     font-size: 1rem;
