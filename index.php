@@ -73,24 +73,6 @@
 
                 </div>
             </div>
-            <?php
-            // Connect to database
-            $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
-
-            // Define the SQL statement to add new columns to the project_manager table
-            $sql = "ALTER TABLE project_manager ADD contact_name varchar(255), ADD contact_email varchar(255), ADD contact_phone varchar(255), ADD project_type varchar(255);";
-
-            // Execute the SQL statement
-            if (mysqli_query($conn, $sql)) {
-                echo "New columns added successfully.";
-            } else {
-                echo "Error: " . mysqli_error($conn);
-            }
-
-            // Close database connection
-            mysqli_close($conn);
-            ?>
-
     </main>
     <footer class="container text-center">
         <p>Version Happy Taco111</p>
