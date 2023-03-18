@@ -83,5 +83,5 @@ width: 100%;
 .error-message {
     width: 100%;
     text-align: center;
-    <!-- background-color: black; -->
+    color: red;
 }

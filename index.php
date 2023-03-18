@@ -48,7 +48,7 @@
                         </select>
                         <?php
                         if (isset($_GET['error']) && $_GET['error'] == 'duplicate') {
-                            echo "<p class='error-message'>Error: This project already exists.</p>";
+                            echo "<p class='error-message'>This project already exists.</p>";
                         }
                         ?>
 
