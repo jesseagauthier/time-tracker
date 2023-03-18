@@ -3,7 +3,6 @@
     $sql = "SELECT * FROM project_manager;";
     $result = mysqli_query($conn, $sql);
     $numberofrows = mysqli_num_rows($result);
-    $project_name = $row['projectname'];
     ?>
 
 
@@ -42,6 +41,7 @@
 
                     echo "<h2 class='h1 text-center '> Project List </h2>" . "<br>";
                     while ($row = mysqli_fetch_assoc($result)) {
+                        $project_name = $row['projectname'];
                         echo "<ul>" . "<li>" . $project_name . "</li>" . "</ul>" . "<br>";
                     }
                     $conn->close();
