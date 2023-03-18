@@ -32,7 +32,7 @@
                     <h3 class="text-white my-3 align-self-center">Add A Project</h3>
                     <form class="my-4 align-self-center" method="post" action="newproject.php">
                         <input type="text" id="project_name" name="project-name" required>
-                        <input type="submit" name="Submit" id="Submit" value="Add Project">
+                        <input type="submit" name="Submit" id="Submit" value="New Project">
                     </form>
                 </div>
                 <!-- OutPut -->
