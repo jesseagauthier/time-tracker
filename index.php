@@ -100,7 +100,7 @@
                 </div>
             </div>
     </main>
-    <footer class="container text-center">
+    <footer class="container text-center mt-5">
         <p>Version Happy Taco 6.0</p>
     </footer>
 
