@@ -89,7 +89,7 @@ if (isset($_POST['password'])) {
                 <input type="submit" value="Submit">
             </form>
         </div>
-        ';
+    ';
                         // Stop further execution of code until correct password is entered
                         exit();
                     }
@@ -103,57 +103,58 @@ if (isset($_POST['password'])) {
 
                     // Generate HTML table
                     echo '
-    <table class="project-summary">
-        <h2 class="h1 text-center">Project List</h2>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Contact</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Project Type</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-    ';
+    <div id="content" style="display: none;">
+        <table class="project-summary">
+            <h2 class="h1 text-center">Project List</h2>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Project Type</th>
+                </tr>
+            </thead>
+            <tbody>
+';
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '
-            <tr>
-                <td class="">' . $row['projectname'] . '</td>
-                <td class="">' . $row['contact_name'] . '</td>
-                <td class="">' . $row['contact_email'] . '</td>
-                <td class="">' . $row['contact_phone'] . '</td>
-                <td class="">' . $row['project_type'] . '</td>
-                <td><button onclick="showDetails(' . $row['id'] . ')">Show Details</button></td>
-            </tr>
-        ';
+                <tr>
+                    <td class="">' . $row['projectname'] . '</td>
+                    <td class="">' . $row['contact_name'] . '</td>
+                    <td class="">' . $row['contact_email'] . '</td>
+                    <td class="">' . $row['contact_phone'] . '</td>
+                    <td class="">' . $row['project_type'] . '</td>
+                    <td class=""><button onclick="showDetails(this)">Details</button></td>
+                    <td class="details" style="display: none;">' . $row['details'] . '</td>
+                </tr>
+    ';
                     }
                     echo '
-        </tbody>
-    </table>
-    ';
+            </tbody>
+        </table>
+    </div>
+';
 
                     // Close database connection
                     mysqli_close($conn);
                     ?>
 
                 <script>
-                    function showDetails(id) {
-                        // Connect to database
-                        var xmlhttp = new XMLHttpRequest();
-                        xmlhttp.onreadystatechange = function() {
-                            if (this.readyState == 4 && this.status == 200) {
-                                // Display data on table
-                                document.getElementById("detailsTable").innerHTML = this.responseText;
-                            }
-                        };
-                        xmlhttp.open("GET", "getdetails.php?id=" + id, true);
-                        xmlhttp.send();
-                    }
-                </script>
+                    function showDetails(button) {
+                        // Get the parent row element
+                        var row = button.parentNode.parentNode;
 
-                <div id="detailsTable"></div>
+                        // Toggle the visibility of the details column
+                        var details = row.getElementsByClassName("details")[0];
+                        details.style.display = details.style.display === "none" ? "table-cell" : "none";
+                    }
+
+                    // Show the content once the page has loaded
+                    window.onload = function() {
+                        document.getElementById("content").style.display = "block";
+                    };
+                </script>
 
             </div>
         </div>
