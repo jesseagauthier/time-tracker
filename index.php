@@ -64,65 +64,98 @@ if (isset($_POST['password'])) {
                 </form>
             </div>
 
-            <div>
-                <?php
-                // Check if password is submitted
-                if (isset($_POST['password'])) {
-                    // Check if password is correct
-                    $password = $_POST['password'];
-                    if ($password === 'Bailey1967!!') { // Replace 'your_password_here' with your actual password
-                        // Connect to database
-                        $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+            <div><?php
+                    session_start(); // Start the session
 
-                        // Retrieve data from database
-                        $sql = "SELECT * FROM project_manager;";
-                        $result = mysqli_query($conn, $sql);
-
-                        // Generate HTML table
-                        echo '
-            <table class="project-summary">
-                <h2 class="h1 text-center">Project List</h2>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Contact</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Project Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-        ';
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo '
-                    <tr>
-                        <td class="">' . $row['projectname'] . '</td>
-                        <td class="">' . $row['contact_name'] . '</td>
-                        <td class="">' . $row['contact_email'] . '</td>
-                        <td class="">' . $row['contact_phone'] . '</td>
-                        <td class="">' . $row['project_type'] . '</td>
-                    </tr>
-            ';
+                    // Check if password is submitted
+                    if (isset($_POST['password'])) {
+                        // Check if password is correct
+                        $password = $_POST['password'];
+                        if ($password === 'Bailey1967!!') { // Replace 'your_password_here' with your actual password
+                            $_SESSION['password'] = $password; // Set password in session variable
+                        } else {
+                            $error = true;
                         }
-                        echo '
-                </tbody>
-            </table>
-        ';
-                        // Hide the password form
-                        echo '<style>.password_form { display: none; }</style>';
-                    } else {
-                        echo '<p>Incorrect password. Please try again.</p>';
                     }
-                }
-                ?>
-                <form class="password_form" method="post" action="">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                    <input type="submit" name="login" id="login" value="Login">
-                </form>
+
+                    // Check if password is in session variable
+                    if (!isset($_SESSION['password']) || $_SESSION['password'] !== 'Bailey1967!!') {
+                        // Display password form if not in session or if session is incorrect
+                        echo '
+        <div class="password_form">
+            <form method="post" action="">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        ';
+                        // Stop further execution of code until correct password is entered
+                        exit();
+                    }
+
+                    // Connect to database
+                    $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+
+                    // Retrieve data from database
+                    $sql = "SELECT * FROM project_manager;";
+                    $result = mysqli_query($conn, $sql);
+
+                    // Generate HTML table
+                    echo '
+    <table class="project-summary">
+        <h2 class="h1 text-center">Project List</h2>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Project Type</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+    ';
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '
+            <tr>
+                <td class="">' . $row['projectname'] . '</td>
+                <td class="">' . $row['contact_name'] . '</td>
+                <td class="">' . $row['contact_email'] . '</td>
+                <td class="">' . $row['contact_phone'] . '</td>
+                <td class="">' . $row['project_type'] . '</td>
+                <td><button onclick="showDetails(' . $row['id'] . ')">Show Details</button></td>
+            </tr>
+        ';
+                    }
+                    echo '
+        </tbody>
+    </table>
+    ';
+
+                    // Close database connection
+                    mysqli_close($conn);
+                    ?>
+
+                <script>
+                    function showDetails(id) {
+                        // Connect to database
+                        var xmlhttp = new XMLHttpRequest();
+                        xmlhttp.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                // Display data on table
+                                document.getElementById("detailsTable").innerHTML = this.responseText;
+                            }
+                        };
+                        xmlhttp.open("GET", "getdetails.php?id=" + id, true);
+                        xmlhttp.send();
+                    }
+                </script>
+
+                <div id="detailsTable"></div>
 
             </div>
-
         </div>
 </main>
 <footer class="container text-center mt-5">
