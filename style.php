@@ -43,7 +43,7 @@ margin: 0 4em;
 }
 
 .project-summary th,tr,td {
-    padding: 0em .40em;
+padding: 0em .40em;
 border: 3px solid black;
 }
 
@@ -68,11 +68,17 @@ margin: 1em 0;
 }
 
 @media screen and (min-width: 766px) {
+
 form, .project-summary {
 width: 80%;
 margin: 0 auto;
 border-spacing: 30px;
 }
+
+form {
+width: 40%;
+}
+
 
 
 
@@ -82,7 +88,7 @@ width: 100%;
 }
 
 .error-message {
-    width: 100%;
-    text-align: center;
-    color: red;
+width: 100%;
+text-align: center;
+color: red;
 }
