@@ -41,15 +41,16 @@
                         <!-- Project Type -->
                         <label for="type">Project Type</label>
                         <select name="project_type" id="type" required>
-                            <option name="project_type" value="web">Web Development</option>
-                            <option name="project_type" value="design">Web Design</option>
-                            <option name="project_type" value="WordPress">WordPress</option>
-                            <option name="project_type" value="UI">UI</option>
+                            <option value="web">Web Development</option>
+                            <option value="design">Web Design</option>
+                            <option value="WordPress">WordPress</option>
+                            <option value="UI">UI</option>
                         </select>
 
                         <input type="submit" name="Submit" id="submit" value="Add New Project">
                     </form>
                 </div>
+
                 <!-- OutPut -->
                 <div class="">
                     <?php
