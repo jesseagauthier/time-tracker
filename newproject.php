@@ -25,7 +25,7 @@ if(isset($_POST['Submit'])) {
     $project_type = mysqli_real_escape_string($con, $project_type);
 
     // database insert SQL code
-    $sql = "INSERT INTO `project_manager` (`projectname`, `contact_name`, `contact_email`, `contact_phone`, `project_type`)
+    $sql = "INSERT INTO `project_manager` (`projectname`, `contact_name`, `contact_email`, `contact_phone`, `type`)
             VALUES ('$projectname', '$contact_name', '$contact_email', '$contact_phone', '$project_type')";
 
     // insert in database
