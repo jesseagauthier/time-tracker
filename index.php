@@ -40,8 +40,8 @@
                     <?php
 
                     echo "<h2 class='h1 text-center '> Project List </h2>" . "<br>";
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $project_name = $row['projectname'];
+                    while ($rows = mysqli_fetch_assoc($result)) {
+                        $project_name = $rows['projectname'];
                         echo "<ul>" . "<li>" . $project_name . "</li>" . "</ul>" . "<br>";
                     }
                     $conn->close();
