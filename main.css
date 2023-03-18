@@ -2,14 +2,15 @@
     color: white;
 }
 
-#Submit {
+#submit {
     all: unset;
     background-color: black;
     color: white;
+    padding: 1em;
 }
 
 
-#Submit:hover {
+#submit:hover {
     background-color: white;
     color: black;
 }

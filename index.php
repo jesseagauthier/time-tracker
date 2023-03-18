@@ -31,7 +31,7 @@
                 <div class="col-11 offset-1 text-center bg-primary m-1">
                     <form class="my-4 align-self-center" method="post" action="newproject.php">
                         <input type="text" id="project_name" name="project-name" required>
-                        <input type="submit" name="Submit" id="Submit" value="New Project">
+                        <input type="submit" name="Submit" id="submit" value="New Project">
                     </form>
                 </div>
                 <!-- OutPut -->
