@@ -28,6 +28,8 @@ width: 100%;
 
 
 .project-summary thead tr {
+    display:flex;
+    justify-content: space-evenly;
 width: fit-content;
 }
 
