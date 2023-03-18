@@ -41,6 +41,9 @@
                 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 projectname VARCHAR(30) NOT NULL,";
 
+                $conn->exec($sql);
+                echo "Table MyGuests created successfully";
+
 
                 echo "<h2 class='h1 text-center '> Project List </h2>" . "<br>";
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -51,16 +54,6 @@
                 ?>
             </div>
         </div>
-        <table class="text-black">
-            <thead>Active Project</thead>
-            <tbody>
-                <tr>
-                    <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
-                </tr>
-            </tbody>
-        </table>
 </main>
 <footer class="container text-center">
     <p>Version Happy fTaco</p>
