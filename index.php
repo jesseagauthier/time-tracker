@@ -45,6 +45,32 @@
                 $conn->close();
                 ?>
             </div>
+            <div>
+                <table>
+                    <tr>
+                        <th>Project Name</th>
+                    </tr>
+                    <!-- PHP CODE TO FETCH DATA FROM ROWS -->
+                    <?php
+                    // LOOP TILL END OF DATA
+                    while ($rows = $result->fetch_assoc()) {
+                    ?>
+                        <tr>
+                            <!-- FETCHING DATA FROM EACH
+                    ROW OF EVERY COLUMN -->
+                            <td><?php echo $rows['projectname']; ?></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </table>
+            </div>
+
+
+
+
+
+
         </div>
 </main>
 <footer class="container text-center">
