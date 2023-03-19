@@ -96,7 +96,7 @@ if (isset($_POST['password'])) {
                     $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
 
                     // Prepare and execute the statement to retrieve data from database
-                    $stmt = mysqli_prepare($conn, "SELECT name, contact, email, phone, project_type FROM project_manager");
+                    $stmt = mysqli_prepare($conn, "SELECT projectname, contact_name, contact_email, contact_phone, project_type) FROM project_manager");
                     mysqli_stmt_execute($stmt);
 
                     // Bind the results to variables
