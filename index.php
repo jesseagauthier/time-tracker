@@ -65,32 +65,7 @@ if (isset($_POST['password'])) {
             </div>
 
             <div><?php
-                    session_start(); // Start the session
-                    ini_set('display_errors', 1);
-                    ini_set('display_startup_errors', 1);
-                    error_reporting(E_ALL);
-
-
-                    if (!isset($_SESSION['password']) || $_SESSION['password'] !== 'Bailey1967!!') {
-                        // Display password form if not in session or if session is incorrect
-                        echo "Rendering password form";
-                        echo '  <div class="password_form">
-            <form method="post" action="">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    ';
-                        // Stop further execution of code until correct password is entered
-                        exit();
-                    }
-
-
-
-
-
-
+                    session_start();
                     // Check if password is submitted
                     if (isset($_POST['password'])) {
                         // Check if password is correct
