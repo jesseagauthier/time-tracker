@@ -64,12 +64,109 @@ if (isset($_POST['password'])) {
                 </form>
             </div>
 
-            <div>
+            <div><?php
+                    session_start(); // Start the session
+                    ini_set('display_errors', 1);
+                    ini_set('display_startup_errors', 1);
+                    error_reporting(E_ALL);
+
+
+                    if (!isset($_SESSION['password']) || $_SESSION['password'] !== 'Bailey1967!!') {
+                        // Display password form if not in session or if session is incorrect
+                        echo "Rendering password form";
+                        echo '  <div class="password_form">
+            <form method="post" action="">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    ';
+                        // Stop further execution of code until correct password is entered
+                        exit();
+                    }
+
+
+
+
+
+
+                    // Check if password is submitted
+                    if (isset($_POST['password'])) {
+                        // Check if password is correct
+                        $password = $_POST['password'];
+                        if ($password === 'Bailey1967!!') { // Replace 'your_password_here' with your actual password
+                            $_SESSION['password'] = $password; // Set password in session variable
+                        } else {
+                            $error = true;
+                        }
+                    }
+
+                    // Check if password is in session variable
+                    if (!isset($_SESSION['password']) || $_SESSION['password'] !== 'Bailey1967!!') {
+                        // Display password form if not in session or if session is incorrect
+                        echo '  <div class="password_form">
+                <form method="post" action="">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            ';
+                        // Stop further execution of code until correct password is entered
+                        exit();
+                    }
+
+                    // Connect to database using prepared statements
+                    $conn = mysqli_connect('localhost:3306', 'project_manager', 'Bailey1967!!', 'project_tracker');
+
+                    // Prepare and execute the statement to retrieve data from database
+                    $stmt = mysqli_prepare($conn, "SELECT name, contact, email, phone, project_type FROM project_manager");
+                    mysqli_stmt_execute($stmt);
+
+                    // Bind the results to variables
+                    mysqli_stmt_bind_result($stmt, $name, $contact, $email, $phone, $project_type);
+
+                    // Generate HTML table
+                    echo '
+        <table class="project-summary">
+            <h2 class="h1 text-center">Project List</h2>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Project Type</th>
+                </tr>
+            </thead>
+            <tbody>
+    ';
+
+                    // Fetch the rows and display them in the table
+                    while (mysqli_stmt_fetch($stmt)) {
+                        echo '
+            <tr>
+                <td>' . htmlspecialchars($name) . '</td>
+                <td>' . htmlspecialchars($contact) . '</td>
+                <td>' . htmlspecialchars($email) . '</td>
+                <td>' . htmlspecialchars($phone) . '</td>
+                <td>' . htmlspecialchars($project_type) . '</td>
+            </tr>
+        ';
+                    }
+
+                    echo '
+        </tbody>
+    </table>
+';
+                    ?>
+
             </div>
         </div>
 </main>
 <footer class="container text-center mt-5">
-    <p>Versiofn Happy Taco 6.0</p>
+    <p>Versiofn Happy Taco f6.0</p>
 </footer>
 
 <body>
